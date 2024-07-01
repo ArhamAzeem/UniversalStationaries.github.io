@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Stationary</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Assets/CSS/style.css">
+    <link rel="stylesheet" href="Assets/CSS/bootstrap.min.css">
+    <link rel="icon" type="image/x-icon" href="Assets/Img/US-Logo.png">
+
+</head>
+
+<body>
+    <div class="container-fliud">
+        <nav class="navbar navbar-expand-lg sticky-top" id="navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img id="navbar-brand" src="Assets/Img/US-Logo.png" alt="">
+                    Universal Stationary</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav ms-auto me-auto my-2 my-lg-0 navbar-nav-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link " href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#about">About</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#category" onclick="filterProducts('all', 'category')">Products</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#comparison">Comparison</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="row">
+            <div class="col slideshow">
+                <div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="cadrousel-item active" data-bs-interval="500">
+                            <img src="Assets/Img/Banner 1.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="1500">
+                            <img src="Assets/Img/Banner 2.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="Assets/Img/Banner 3.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            <div id="about" class="scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4 pt-4">
+                <div class="scroller-card col-lg-4 col-sm-10">
+                    <h5>Unveiling Universal Stationary: Your One-Stop Shop for Inspiration</h5>
+                    <p>Welcome to Universal Stationary, where the power of expression meets the joy of discovery! We're
+                        not just your average pen-and-paper store; we're a haven for creative minds, budding artists,
+                        and everyday heroes seeking to make their mark. Whether you're stocking up on office essentials,
+                        igniting your artistic journey, or finding the perfect gift for a loved one, our curated
+                        selection promises to inspire and delight.</p>
+                </div>
+                <div class="scroller-card col-lg-4 col-sm-10">
+                    <h5>Dive into a Universe of Choice</h5>
+                    <p>Forget the basic black and white - at Universal Stationary, we celebrate the vibrant spectrum of
+                        colors and textures! Explore renowned brands and hidden gems among our extensive collection of
+                        pens, pencils, paints, and markers, catering to every style and budget. Unleash your inner
+                        artist with the perfect tools to bring your ideas to life.</p>
+                </div>
+                <div class="scroller-card col-lg-4 col-sm-10">
+                    <h5>Your Canvas of Creativity Awaits</h5>
+                    <p>Are you a budding artist or a seasoned professional? We have the perfect tools for every stage of
+                        your creative journey. Find high-quality canvases, sketchbooks in all sizes, and a diverse range
+                        of drawing and painting mediums suitable for both beginners and experts. Let your imagination
+                        run wild with our carefully curated selection of art supplies in Karachi.</p>
+                </div>
+                <div class="scroller-card col-lg-4 col-sm-10">
+                    <h5>More Than Stationery: Gifts that Spark Joy</h5>
+                    <p>Looking for the perfect gift in Karachi that goes beyond the ordinary? Discover a treasure trove
+                        of unique notebooks, journals, greeting cards, and desk accessories at Universal Stationary.
+                        Find thoughtful gifts for any occasion and personality, from classic and elegant to quirky and
+                        fun. Let our curated collection help you express your appreciation and spark joy in the
+                        recipient.</p>
+                </div>
+                <div class="scroller-card col-lg-4 col-sm-10">
+                    <h5>Join Our Community of Inspiration</h5>
+                    <p>At Universal Stationary, we believe that creativity thrives in community. Join us for engaging
+                        workshops, informative tutorials, and exciting events designed to inspire you and connect you
+                        with fellow creative minds in Karachi. Share your experiences, learn new techniques, and be part
+                        of something bigger than yourself. Let's unlock the boundless potential of creativity, together!
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <hr>
+        <div class="row brand-row brand-col p-2">
+
+            <h3 class="headings text-center mt-3">Explore Brands</h3>
+
+            <div class="col brand mb-4">
+
+
+                <div class="brand-item dollar" onclick="filterProducts('dollar', 'brand')"><img src="Assets/Img/DollarBrandLogo.jpg"
+                            alt=""></div>
+            </div>
+            <div class="col mb-4">
+                <div class="brand-item derwent" onclick="filterProducts('derwent', 'brand')"><img src="Assets/Img/DerwentBrandLogo.jpg"
+                            alt=""></div>
+            </div>
+            <div class="col mb-4">
+                <div class="brand-item piano" onclick="filterProducts('piano', 'brand')"><img src="Assets/Img/PianoBrandLogo.jpg" alt="">
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="brand-item montmarte" onclick="filterProducts('montmarte', 'brand')"><img src="Assets/Img/MontMarteBrandLogo.jpg"
+                            alt=""></div>
+            </div>
+            <div class="col mb-4">
+                <div class="brand-item oro" onclick="filterProducts('oro', 'brand')"><img src="Assets/Img/OroBrandLogo.jpg" alt=""></div>
+            </div>
+            <div class="col mb-4">
+                <div class="brand-item keepsmiling" onclick="filterProducts('keepsmiling', 'brand')"><img src="Assets/Img/KSLOGO.jpg" alt="">
+                </div>
+            </div>
+
+
+        </div>
+    
+    <hr>
+    <!-- modal -->
+    <div class="modal fade modal-lg" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col col-12 col-lg-6 col-sm-12">
+                            <img src="" alt="" id="modalimg">
+
+                        </div>
+                        <div class="col col-12 col-lg-6 col-sm-12 mt-sm-1 mt-lg-5">
+                            <h4 id="modalheading"></h4>
+                            <h4 id="modalquantity">Quantity: 1</h4>
+                            <p id="modalpara"></p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-modal"><a id="download" href="">Download Details</a></button>
+                    <button type="button" class="btn-modal" onclick="order()">Order Now</button>
+                    <div id="order">Your Order has been placed!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal closed -->
+    <!-- <div class="row"><div class="col">
+        <div class="brands">
+          
+        </div>
+      </div></div> -->
+    <hr>
+    
+        <div class="row main" id="category">
+            <div class="col">
+
+                <h2 class="headings text-center">Featured Products</h2>
+            </div>
+        </div>
+        <div class="row bar ms-auto mb-4 pb-2">
+            <div class="col mt-2">
+                <div onclick="filterProducts('all', 'category')" class="btn p-1 category">Show All</div>
+
+            </div>
+            <div class="col mt-2">
+                <div onclick="filterProducts('pencil', 'category')" class="btn category">Pencils</div>
+            </div>
+            <div class="col mt-2">
+                <div onclick="filterProducts('pen', 'category')" class="btn category">Pens</div>
+            </div>
+            <div class="col mt-2">
+                <div onclick="filterProducts('nbook', 'category')" class="btn category">NoteBooks</div>
+            </div>
+            <div class="col mt-2">
+                <div onclick="filterProducts('paint', 'category')" class="btn category">Paints</div>
+            </div>
+
+            <div class="col mt-2">
+                <div onclick="filterProducts('sharpner', 'category')" class="btn category">Sharpners</div>
+            </div>
+            <div class="col mt-2">
+                <div onclick="filterProducts('eraser', 'category')" class="btn category">Erasers</div>
+            </div>
+            <div class="col mt-2">
+                <div onclick="filterProducts('stapler', 'category')" class="btn category">Staples</div>
+            </div>
+            <div class="col mt-2">
+                <div onclick="filterProducts('calculator', 'category')" class="btn category">Calculator</div>
+            </div>
+            <div class="col mt-2">
+                <div onclick="filterProducts('sbook', 'category')" class="btn category">SketchKit</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-sm-12">
+                <div id="products"></div>
+            </div>
+        </div>
+    
+        <h1 class="display-5 text-center headings mt-4" id="comparison">COMPARE YOUR PRODUCTS</h1>
+        <div class="col-md-10 mx-auto mb-4">
+            <table class="table">
+                <tr>
+                    <th>SELECT YOUR PRODUCTS</th>
+                    <th>
+                        <select name="" id="sel1" class="form-control" onclick="Item1(this.value)">
+                            <option value="0">---Select Your Produts---</option>
+                        </select>
+                    </th>
+                    <th>
+                        <select name="" id="sel2" class="form-control" onclick="Item2(this.value)">
+                            <option value="0">---Select Your Produts---</option>
+                        </select>
+                    </th>
+                </tr>
+                <tr>
+                    <th  class="col-lg-4">Image</th>
+                    <th class="col-lg-4"><img src="images/0.png" alt="" id="img1"></th>
+                    <th class="col-lg-4"><img src="images/0.png" alt="" id="img2"></th>
+                </tr>
+                <tr>
+                    <th  class="col-lg-2">Name</th>
+                    <th class="col-lg-4">
+                        <h5 id="d1">N/A</h5>
+                    </th>
+                    <th  class="col-lg-4">
+                        <h5 id="d4">N/A</h5>
+                    </th>
+                </tr>
+                <tr>
+                    <th  class="col-lg-2">Description</th>
+                    <th class="col-lg-4">
+                        <h5 id="d2">N/A</h5>
+                    </th>
+                    <th  class="col-lg-4">
+                        <h5 id="d5">N/A</h5>
+                    </th>
+                </tr>
+            </table>
+        </div>
+
+        <div class="row contact-section p-2 p-sm-4" id="contact">
+
+            <h2 class="headings text-center mt-2">Feel Free to Contact Us</h2>
+
+            <div class="col-lg-4 col-sm-11 ms-lg-auto mb-2 me-lg-auto contact-form">
+
+                <h4 class="mt-3">Fill Out the Form to Contact Us!</h4>
+                <form action="mailto: arhamazeem318@gmail.com">
+                    <label>Name:</label>
+                    <br>
+                    <input type="text" class="c-name" placeholder="First Name..." required>
+                    <input type="text" class="c-name" placeholder="Last Name..." required>
+                    <br>
+                    <label>Email:</label>
+                    <br>
+                    <input type="email" class="c-mail" placeholder="Email..." required>
+                    <br>
+                    <label>Address:</label>
+                    <br>
+                    <input type="text" class="c-address" placeholder="Address..." required>
+                    <br>
+                    <label>Message:</label>
+                    <br>
+                    <textarea class="c-message " rows="5" placeholder="Type Your Message..."></textarea>
+                    <br>
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </form>
+                <script>
+                    // Function to check for numeric characters
+                    function containsNumbers(event) {
+                        var char = String.fromCharCode(event.which);
+                        if (/\d/.test(char)) {
+                            event.preventDefault();
+                        }
+                    }
+                
+                    // Apply the function to all relevant fields
+                    document.querySelectorAll('.c-name').forEach(function(input) {
+                        input.addEventListener('keypress', containsNumbers);
+                    });
+                
+                    // For the email field, improve validation to disallow spaces and numbers at the beginning
+                    document.querySelector('.c-mail').addEventListener('input', function(event) {
+                        this.value = this.value.replace(/^\d+|[\s]/g, '');
+                    });
+                </script>
+
+            </div>
+            <div class="col-lg-6 col-md-10 me-lg-auto ">
+                <div class="newsletter p-4">
+                <h4 class="mt-3">Join Our Newsletter</h4>
+                <p class="mt-2">Calling all creative minds! Universal Stationary has something for everyone, from
+                    exclusive art
+                    supplies and back-to-school essentials to a free calligraphy workshop and online discounts. Browse
+                    curated collections, get inspired by our blog, and join our community for events and connection.
+                    Sign up for the newsletter today to unlock inspiration and exclusive offers!</p>
+                
+                <textarea class="c-message" placeholder="Type Any Message..."></textarea>
+                <br>
+                <button type="submit" onclick="newsLetter()" class="btn-newsletter mt-3">Join Now</button>
+            </div>
+            <div class="contact-info mt-3 p-3 mb-2">
+
+                <h5>Contact#03182546510</h5>
+                <h5>Mail Us</h5><a class="mail" href="mailto:arhamazeem318@gmail.com">arhamazeem318@gmail.com</a>
+                <br><br>
+                <h5>Our Location::</h5>Shop No 3, 4 Jamaluddin Afghani Rd, CP & Berar Society Sharfabad, Karachi,
+                Karachi City, Sindh, Pakistan
+
+            </div>
+            </div>
+        </div>
+    
+
+        <footer>
+            <div class="row">
+                <div class="col">
+                    <center>
+                        <h2 class="footer-h mt-4 mb-4">Universal Stationary</h2>
+                    </center>
+                </div>
+            </div>
+            <div class="row footerlink">
+                <div class="col-lg-4 col-md-8">
+                    <ul class="footer-ul">
+
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#category" onclick="filterProducts('all', 'category')">Products</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-8">
+                    <ul class="footer-ul">
+                        <li><a href="#category" onclick="filterProducts('dollar', 'brand')">Dollar</a></li>
+                        <li><a href="#category" onclick="filterProducts('derwent', 'brand')">Derwent</a></li>
+                        <li><a href="#category" onclick="filterProducts('piano', 'brand')">Piano</a></li>
+                        <li><a href="#category" onclick="filterProducts('montmarte', 'brand')">Mont Marte</a></li>
+                        <li><a href="#category" onclick="filterProducts('oro', 'brand')">Oro</a></li>
+                        <li><a href="#category" onclick="filterProducts('keepsmiling', 'brand')">Keep Smiling</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <ul class="footer-ul">
+                        <li style="color: rgb(56, 16, 94);">Follow Us On</li>
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i> Twitter</a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                        <li><a href="#"><i class="fa-brands fa-pinterest"></i> Pinterest</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row footerlink">
+                <div class="col-lg-12 col-md-4 m-4">
+                    <iframe id="location" 
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14477.709478004286!2d67.06389!3d24.8834!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33eec02bd8a8f%3A0x7c90d08d5f7b4b27!2zVW5pdmVyc2FsIFN0b3JlINuM2YjZhtuM2YjYsdiz2YQg2KfYs9m52YjYsQ!5e0!3m2!1sen!2sus!4v1707310855990!5m2!1sen!2sus"
+                       style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col footer-caption">
+                    <center>
+                        <p>All rights reserved. Copyrights &copy; 2024 Universal Stationary</p>
+                    </center>
+                </div>
+            </div>
+   
+        </footer>
+        <div id="subscribed">✓ Congratulations! You have successfully subscribed for our latest offers.</div>
+    </div>
+    <script src="Assets/JS/us.js"></script>
+    <script src="Assets/JS/bootstrap.bundle.min.js"></script>
+    <script src="Assets/JS/products.json"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c24555a225.js" crossorigin="anonymous"></script>
+    <script>
+        // Function to filter products based on category or brand
+function filterProducts(value, filterType) {
+    var filteredProducts;
+
+    if (filterType === 'category') {
+        filteredProducts = products.filter(function(product) {
+            return (value === 'all' || product.category === value);
+        });
+    } else if (filterType === 'brand') {
+        filteredProducts = products.filter(function(product) {
+            return (value === 'all' || product.brand === value);
+        });
+    }
+
+    renderProductCards(filteredProducts);
+}
+
+        // Function to render product cards
+function renderProductCards(products) {
+    var productList = document.getElementById('products');
+    productList.innerHTML = '';
+
+    products.forEach(function(product) {
+        var productCard = document.createElement('div');
+        productCard.className = 'card';
+        productCard.style.width = '14rem';
+        productCard.style.height = '24rem';
+        productCard.style.border = 'none';
+
+        var cardContent = `
+            <img class="card-img-top" src="${product.img}" alt="Card image cap">
+            <div class="card-body d-flex flex-column">
+                <h6 class="card-title">${product.title}</h6>
+                <h5 class="card-price">Rs.${product.price}</h5>
+                <a href="#" class="btn-card-view mt-auto" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn" onclick="card_data(${product.card_id})">Quick View</a>
+            </div>
+        `;
+        productCard.innerHTML = cardContent;
+        productList.appendChild(productCard);
+    });
+}
+
+// Initial render
+filterProducts('all', 'category');
+    </script>
+    <script>
+        window.addEventListener("scroll", function () {
+            var navbar = this.document.getElementById("navbar")
+            var logo = this.document.getElementById("navbar-brand")
+            if (this.window.scrollY > 50) {
+                logo.style.height = "7vh";
+                navbar.style.height = "70px";
+                navbar.style.backgroundColor = "white";
+                navbar.style.boxShadow = "inset 0 0 30px rgb(231, 205, 247)";
+                navbar.style.boxShadow = "0 20px 15px black";
+            } else {
+                logo.style.height = "10vh";
+                navbar.style.height = "100px";
+                navbar.style.backgroundColor = "rgb(137, 82, 139)";
+                navbar.style.boxShadow = "inset 0 0 10px rgb(83, 48, 107)";
+            }
+        });
+    </script>
+    <script>
+        // for (var a = 0; a < 50; a++) {
+        //     document.getElementById("products").innerHTML += `
+        // <div class="card" style="width: 14rem; height:24rem;border: none;">
+        //       <img class="card-img-top" src=${products[a].img} alt="Card image cap">
+        //       <div class="card-body d-flex flex-column">
+        //         <h6 class="card-title">${products[a].title}</h6>
+        //         <h5 class="card-price">Rs.${products[a].price}</h5>
+        //         <a href="#" class="btn-card-view mt-auto" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn" onclick="card_data(${products[a].card_id})">Quick View</a>
+        //       </div>
+        //     </div>
+        // `;
+        // };
+
+        function card_data(id) {
+            for (a = 0; a < products.length; a++) {
+                if (products[a].card_id == id) {
+                    document.getElementById("exampleModalLabel").innerHTML = `${products[a].title}`;
+                    document.getElementById("modalpara").innerHTML = `${products[a].description}`;
+                    document.getElementById("modalheading").innerHTML = `Price: PKR ${products[a].price}`;
+                    document.getElementById("modalimg").src = `${products[a].img}`;
+                    document.getElementById("download").href = `${products[a].downloadlink}`;
+                }
+            }
+        }
+    </script>
+    <script>
+        for (var i = 1; i < products.length; i++) {
+            document.getElementById('sel1').innerHTML += `
+            <option value="${i}">${products[i].title}</option>
+            `
+        }
+        function Item1(a) {
+            var select2 = document.getElementById('sel2').value;
+            if (a != select2) {
+                document.getElementById('img1').src = products[a].img
+                document.getElementById('d1').innerHTML = products[a].title;
+                document.getElementById('d2').innerHTML = products[a].description;
+                document.getElementById('d3').innerHTML = product[a].price;
+            } else {
+                document.getElementById('img1').src = products[0].img
+                document.getElementById('d1').innerHTML = products[0].title;
+                document.getElementById('d2').innerHTML = products[0].description;
+                document.getElementById('d3').innerHTML = product[0].price;
+            }
+        }
+        for (var i = 1; i < products.length; i++) {
+            document.getElementById('sel2').innerHTML += `
+            <option value="${i}">${products[i].title}</option>
+            `
+        }
+        function Item2(a) {
+            var select1 = document.getElementById('sel1').value;
+            if (a != select1) {
+                document.getElementById('img2').src = products[a].img
+                document.getElementById('d4').innerHTML = products[a].title;
+                document.getElementById('d5').innerHTML = products[a].description;
+                document.getElementById('d6').innerHTML = product[a].price;
+
+            } else {
+                document.getElementById('img2').src = products[0].img
+                document.getElementById('d4').innerHTML = products[0].title;
+                document.getElementById('d5').innerHTML = products[0].description;
+                document.getElementById('d6').innerHTML = product[0].price;
+            }
+
+        }
+        
+function newsLetter() {
+  var x = document.getElementById("subscribed");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+
+function order() {
+  var x = document.getElementById("order");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+
+    </script>
+</body>
+
+</html>
